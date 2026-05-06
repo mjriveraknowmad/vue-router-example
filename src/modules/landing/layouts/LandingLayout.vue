@@ -7,11 +7,16 @@
           <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="40" height="40" />
         </a>
       </div>
-      <nav class="ml-auto space-x-4 flex items-center h-10 sm:space-x-6">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/features">Features</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
-        <RouterLink to="/pricing">Pricing</RouterLink>
+      <nav class="flex flex-col ml-auto space-x-4 items-end h-10 sm:space-x-6">
+        <div class="space-x-4">
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/features">Features</RouterLink>
+          <RouterLink to="/contact">Contact</RouterLink>
+          <RouterLink to="/pricing">Pricing</RouterLink>
+        </div>
+        <div class="space-x-4">
+          <RouterLink to="/auth/login">Login</RouterLink>
+        </div>
       </nav>
     </header>
     <!-- Fin Header -->

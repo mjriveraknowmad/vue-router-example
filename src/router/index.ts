@@ -1,3 +1,5 @@
+
+import NotFound404 from '@/modules/common/pages/NotFound404.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 export const router = createRouter({
@@ -48,6 +50,12 @@ export const router = createRouter({
           component: () => import('@/modules/auth/pages/RegisterPage.vue'),
         },
       ],
+    },
+
+    //NotFound
+    { 
+      path: '/:pathMatch(.*)*', 
+      component: NotFound404
     },
   ],
 });
