@@ -30,12 +30,11 @@ export const router = createRouter({
           name: 'pricing',
           component: () => import('@/modules/landing/pages/PricingPage.vue'),
         },
-        
         // Pokemon
         {
           path: '/pokemon/:id',
           name: 'pokemon',
-          props: true,
+          props: (route) => ({ id: isNaN(+route.params.id) ? 1 : +route.params.id }), // transformar el id a número
           component: () => import('@/modules/pokemons/pages/PokemonPage.vue'),
         },
       ],
