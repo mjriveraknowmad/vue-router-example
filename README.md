@@ -2,6 +2,10 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+Credits: [Vue Course Fernando Herrera ](https://knowmadmood.udemy.com/course/vuejs-fh/learn/lecture/43914760#overview)
+
+
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
@@ -13,6 +17,16 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+
+
+## Tailwind components used
+
+[Contact](https://www.creative-tim.com/twcomponents/component/contact-map)
+[Pricing](https://www.creative-tim.com/twcomponents/component/pricing-sections)
+[Features](https://www.creative-tim.com/twcomponents/component/statics-viewer)
+
+
 
 ## Project Setup
 
