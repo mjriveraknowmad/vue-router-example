@@ -6,23 +6,30 @@ export const router = createRouter({
     {
       path: '/',
       name: 'landing',
-      component: () => import('@/modules/landing/pages/HomePage.vue'),
-    },
-    {
-      path: '/features',
-      name: 'features',
-      component: () => import('@/modules/landing/pages/FeaturesPage.vue'),
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('@/modules/landing/pages/ContactPage.vue'),
-    },
-    {
-      path: '/pricing',
-      name: 'pricing',
-      component: () => import('@/modules/landing/pages/PricingPage.vue'),
-    },
+      component: () => import('@/modules/landing/layouts/LandingLayout.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'landing',
+          component: () => import('@/modules/landing/pages/HomePage.vue'),
+        },
+        {
+          path: '/features',
+          name: 'features',
+          component: () => import('@/modules/landing/pages/FeaturesPage.vue'),
+        },
+        {
+          path: '/contact',
+          name: 'contact',
+          component: () => import('@/modules/landing/pages/ContactPage.vue'),
+        },
+        {
+          path: '/pricing',
+          name: 'pricing',
+          component: () => import('@/modules/landing/pages/PricingPage.vue'),
+        },
+      ],
+    }
   ],
 });
 
