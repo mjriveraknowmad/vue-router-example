@@ -14,22 +14,41 @@ export const router = createRouter({
           component: () => import('@/modules/landing/pages/HomePage.vue'),
         },
         {
-          path: '/features',
+          path: 'features',
           name: 'features',
           component: () => import('@/modules/landing/pages/FeaturesPage.vue'),
         },
         {
-          path: '/contact',
+          path: 'contact',
           name: 'contact',
           component: () => import('@/modules/landing/pages/ContactPage.vue'),
         },
         {
-          path: '/pricing',
+          path: 'pricing',
           name: 'pricing',
           component: () => import('@/modules/landing/pages/PricingPage.vue'),
         },
       ],
-    }
+    },
+
+    // Auth
+    {
+      path: '/auth',
+      redirect: { name: 'login' },
+      component: () => import('@/modules/auth/layouts/AuthLayout.vue'),
+      children: [
+        {
+          path: 'login',
+          name: 'login',
+          component: () => import('@/modules/auth/pages/LoginPage.vue'),
+        },
+        {
+          path: 'register',
+          name: 'register',
+          component: () => import('@/modules/auth/pages/RegisterPage.vue'),
+        },
+      ],
+    },
   ],
 });
 
