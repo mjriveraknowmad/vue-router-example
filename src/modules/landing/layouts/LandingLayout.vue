@@ -15,6 +15,7 @@
           <RouterLink to="/pricing">Pricing</RouterLink>
         </div>
         <div class="space-x-4">
+          <RouterLink to="/pokemon/1">Pokemon</RouterLink>
           <RouterLink to="/auth/login">Login</RouterLink>
         </div>
       </nav>
