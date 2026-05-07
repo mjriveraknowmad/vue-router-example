@@ -9,8 +9,4 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-    import { ref } from 'vue';
-    const counter = ref(0);
-        
-  </script>
+<script lang="ts" src="./HomePage.ts"> </script>
