@@ -29,6 +29,7 @@
         </div>
         <!-- Login Button -->
         <button type="submit"
+            @click.prevent="onLogin"
             class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button>
     </form>
     <!-- Sign up  Link -->
@@ -37,3 +38,15 @@
     </div>
 
 </template>
+
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+const onLogin = () => {
+    localStorage.setItem('userId', 'fake-userId');
+    const lastPath = localStorage.getItem('lastPath') ?? '/';
+    //router.replace({ name: 'landing' });
+    router.replace(lastPath);
+}
+</script>
